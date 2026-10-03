@@ -1,0 +1,53 @@
+.catalog { background: var(--bg); }
+.sec-head {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 36px;
+}
+.sec-head > div { min-width: 0; }
+
+.filters { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  font: 600 14px/1 var(--f-body); padding: 10px 16px; border-radius: 999px; cursor: pointer;
+  border: 1px solid var(--line); background: transparent; color: var(--fg-soft);
+}
+.chip:hover { border-color: var(--fg-soft); color: var(--fg); }
+.chip[aria-pressed="true"] { background: var(--fg); border-color: var(--fg); color: var(--bg); }
+
+.grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+  gap: clamp(16px, 2vw, 26px);
+}
+
+/* Carrusel solo en celular: una selección de pasteles que se desliza */
+.carousel-nav { display: none; align-items: center; justify-content: space-between; gap: 16px; margin-top: 20px; }
+.dots { display: flex; flex-wrap: wrap; gap: 7px; min-width: 0; }
+.dots button {
+  width: 8px; height: 8px; padding: 0; border: 0; border-radius: 999px; background: var(--line);
+  cursor: pointer; transition: width .25s, background .25s;
+}
+.dots button[aria-current="true"] { width: 22px; background: var(--accent); }
+.arrows { display: flex; gap: 8px; flex: none; }
+.arrows button {
+  width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg);
+  color: var(--fg); font-size: 20px; line-height: 1; cursor: pointer; display: grid; place-items: center;
+}
+.arrows button:disabled { opacity: .35; cursor: default; }
+.mobile-more { display: none; margin: 16px 0 0; font-size: 14px; color: var(--fg-soft); }
+.mobile-more a { color: var(--accent); font-weight: 700; }
+
+@media (max-width: 700px) {
+  .filters {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); width: calc(100% + 2 * var(--gutter));
+  }
+  .filters::-webkit-scrollbar, .grid::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+  .grid {
+    display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none;
+    margin-inline: calc(-1 * var(--gutter)); padding-inline: var(--gutter); scroll-padding-inline: var(--gutter);
+    overscroll-behavior-x: contain;
+  }
+  .grid app-cake-card { flex: 0 0 80%; scroll-snap-align: start; }
+  .grid.is-todos app-cake-card.extra { display: none; }
+  .carousel-nav { display: flex; }
+  .mobile-more { display: block; }
+}

@@ -1,0 +1,14 @@
+@let p = pastel();
+<figure class="cake">
+  <div class="ph">
+    <span class="cat">{{ p.etiqueta }}</span>
+    <img [ngSrc]="p.imagen" [alt]="p.nombre + ': ' + p.descripcion" width="800" height="800" loading="lazy" />
+  </div>
+  <figcaption>
+    <div>
+      <h3>{{ p.nombre }}</h3>
+      <p>{{ p.descripcion }}</p>
+    </div>
+    <a href="#pedido" (click)="elegir.emit(p.nombre)">Lo quiero →</a>
+  </figcaption>
+</figure>

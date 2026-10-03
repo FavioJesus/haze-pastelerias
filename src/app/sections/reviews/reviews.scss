@@ -1,0 +1,16 @@
+.reviews { background: var(--bg-alt); }
+.reviews-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(16px, 2.4vw, 28px); margin-top: 40px;
+}
+.review {
+  margin: 0; background: var(--bg); border-radius: var(--radius); padding: 28px; border: 1px solid var(--line);
+  display: flex; flex-direction: column; gap: 16px; min-width: 0;
+}
+.stars { color: var(--hz-caramelo); letter-spacing: 3px; font-size: 15px; }
+blockquote {
+  margin: 0; font-family: var(--f-display); font-size: 22px; line-height: 1.35; font-weight: 500; font-style: italic;
+}
+figcaption { margin-top: auto; font-size: 14px; color: var(--fg-soft); }
+figcaption b { color: var(--fg); }
+.sample-note { margin-top: 20px; font-size: 13px; color: var(--fg-soft); }
+@media (max-width: 860px) { .reviews-grid { grid-template-columns: 1fr; } }

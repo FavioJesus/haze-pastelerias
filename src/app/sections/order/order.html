@@ -1,0 +1,66 @@
+<section class="order" id="pedido">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Pedidos</p>
+      <h2>Cuéntanos tu idea y <span class="script">la hacemos pastel</span></h2>
+      <p class="lede">
+        Completa los datos y se abrirá WhatsApp con tu mensaje listo para enviar. Te respondemos con la
+        cotización.
+      </p>
+      <ul class="contact-list">
+        <li><span>WhatsApp</span><b>{{ numeroVisible }}</b></li>
+        <li><span>Horario de atención</span><b>{{ horario }}</b></li>
+        <li><span>Anticipación</span><b>{{ anticipacion }}</b></li>
+      </ul>
+    </div>
+
+    <form class="card" [formGroup]="form" novalidate>
+      <div class="row2">
+        <label for="f-nombre">
+          Tu nombre
+          <input id="f-nombre" formControlName="nombre" autocomplete="name" placeholder="Ej. María" />
+        </label>
+        <label for="f-fecha">
+          Fecha del evento
+          <input id="f-fecha" formControlName="fecha" type="date" />
+        </label>
+      </div>
+      <div class="row2">
+        <label for="f-ocasion">
+          Ocasión
+          <select id="f-ocasion" formControlName="ocasion">
+            @for (o of ocasiones; track o) {
+              <option [value]="o">{{ o }}</option>
+            }
+          </select>
+        </label>
+        <label for="f-personas">
+          Número de personas
+          <select id="f-personas" formControlName="personas">
+            @for (p of personas; track p) {
+              <option [value]="p">{{ p }}</option>
+            }
+          </select>
+        </label>
+      </div>
+      <label for="f-modelo">
+        Modelo de referencia
+        <select id="f-modelo" formControlName="modelo">
+          <option value="">Ninguno, tengo otra idea</option>
+          @for (p of pasteles(); track p.id) {
+            <option [value]="p.nombre">{{ p.nombre }}</option>
+          }
+        </select>
+      </label>
+      <label for="f-idea">
+        Tu idea
+        <textarea id="f-idea" formControlName="idea" placeholder="Tema, colores, sabor, nombre que debe llevar..."></textarea>
+      </label>
+      <a class="btn btn-wa" [href]="urlWhatsapp()" target="_blank" rel="noopener">
+        <app-wa-icon />
+        Enviar pedido por WhatsApp
+      </a>
+      <p class="form-foot">No se envía nada hasta que confirmes el mensaje en WhatsApp.</p>
+    </form>
+  </div>
+</section>

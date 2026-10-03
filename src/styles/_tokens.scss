@@ -1,0 +1,66 @@
+// Tokens de la guía de marca de Hazel Pasteles (GUIA-DE-MARCA.md).
+// Los componentes solo usan estas variables; ningún componente lleva HEX sueltos.
+:root {
+  /* Marca */
+  --hz-chocolate: #3E2117;
+  --hz-cacao: #6B3A26;
+  --hz-fondant: #F2D6CF;
+  --hz-fondant-claro: #F8E7E2;
+  --hz-crema: #FCF5F1;
+  --hz-frambuesa: #D6416B;
+  --hz-frambuesa-texto: #B8284F;
+  --hz-fresa: #D7262E;
+  --hz-chocolate-leche: #A8714B;
+  --hz-caramelo: #C58B45;
+  --hz-hoja: #5C8B3A;
+  --hz-linea: #E8D5CD;
+  --hz-texto-suave: #6E5148;
+
+  /* Tonos fijos de la referencia (no cambian en modo oscuro) */
+  --hz-texto-suave-oscuro: #D9BFB6;
+  --hz-frambuesa-oscuro: #F07A9A;
+  --hz-fondo-oscuro: #24130D;
+  --hz-blanco: #FFFFFF;
+
+  /* Roles semánticos (modo claro) */
+  --bg: var(--hz-crema);
+  --bg-alt: var(--hz-fondant-claro);
+  --bg-rosa: var(--hz-fondant);
+  --fg: var(--hz-chocolate);
+  --fg-soft: var(--hz-texto-suave);
+  --accent: var(--hz-frambuesa-texto);
+  --accent-deco: var(--hz-frambuesa);
+  --line: var(--hz-linea);
+  --plate: #FFFFFF;
+  --dark-band: var(--hz-chocolate);
+  --on-dark: var(--hz-crema);
+  --btn: var(--hz-chocolate);
+  --btn-hover: var(--hz-cacao);
+  --on-btn: var(--hz-crema);
+  --on-accent: var(--hz-blanco);
+  --wa: #1F8F4E;
+
+  /* Sombras (chocolate translúcido) */
+  --shadow-rgb: 62, 33, 23;
+
+  /* Tipografía */
+  --f-display: "Cormorant Garamond", "Cormorant", Garamond, "Times New Roman", serif;
+  --f-body: "Nunito Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-script: "Dancing Script", "Brush Script MT", cursive;
+
+  /* Layout */
+  --wrap: 1180px;
+  --gutter: clamp(16px, 4vw, 40px);
+  --radius: 22px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #24130D; --bg-alt: #2E1912; --bg-rosa: #3A2019;
+    --fg: #FCF5F1; --fg-soft: #D9BFB6; --accent: #F07A9A; --accent-deco: #F07A9A;
+    --line: #4A2C22; --plate: #FBF3EF; --dark-band: #170B07; --on-dark: #FCF5F1;
+    --btn: #F2D6CF; --btn-hover: #FCF5F1; --on-btn: #3E2117; --wa: #2FAE63;
+    --on-accent: var(--hz-fondo-oscuro);
+    color-scheme: dark;
+  }
+}

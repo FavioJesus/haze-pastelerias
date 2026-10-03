@@ -1,0 +1,7 @@
+.wa-float {
+  position: fixed; right: max(16px, env(safe-area-inset-right, 0px));
+  bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 30;
+  width: 58px; height: 58px; border-radius: 50%; background: var(--wa); color: var(--hz-blanco);
+  display: grid; place-items: center; box-shadow: 0 12px 28px -10px rgba(0, 0, 0, .45); text-decoration: none;
+}
+.wa-float { --wa-icon-size: 30px; }

@@ -1,0 +1,8 @@
+.strip { background: var(--dark-band); color: var(--on-dark); padding-block: 18px; overflow: hidden; }
+.strip-track {
+  display: flex; gap: 40px; width: max-content; animation: marquee 38s linear infinite;
+  font-family: var(--f-display); font-weight: 600; font-size: 15px; letter-spacing: 0.3em; text-transform: uppercase;
+}
+.strip-track span { display: flex; align-items: center; gap: 40px; white-space: nowrap; }
+.strip-track span::after { content: "·"; color: var(--hz-caramelo); font-size: 22px; letter-spacing: 0; }
+@keyframes marquee { to { transform: translateX(-50%); } }

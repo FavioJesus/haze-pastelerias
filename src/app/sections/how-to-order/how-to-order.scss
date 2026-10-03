@@ -1,0 +1,15 @@
+.steps { background: var(--bg-rosa); }
+.steps-list {
+  list-style: none; margin: 44px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 40px); counter-reset: s;
+}
+.steps-list li {
+  counter-increment: s; min-width: 0;
+  border-top: 1px solid color-mix(in srgb, var(--fg) 25%, transparent); padding-top: 22px;
+}
+.steps-list li::before {
+  content: counter(s); font-family: var(--f-script); font-weight: 700; font-size: 46px; line-height: 1;
+  color: var(--accent); display: block; margin-bottom: 12px;
+}
+.steps-list p { color: var(--fg-soft); margin: 8px 0 0; }
+@media (max-width: 760px) { .steps-list { grid-template-columns: 1fr; } }

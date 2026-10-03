@@ -1,0 +1,8 @@
+footer {
+  background: var(--dark-band); color: var(--hz-texto-suave-oscuro);
+  border-top: 1px solid color-mix(in srgb, var(--hz-crema) 12%, transparent);
+  padding-block: 36px; font-size: 14px;
+}
+footer .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+footer img { height: 120px; width: auto; }
+.slogan { font-family: var(--f-script); font-size: 22px; color: var(--on-dark); }
