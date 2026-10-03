@@ -12,32 +12,60 @@ export interface DatosPedido {
   idea: string;
 }
 
-const SALUDO = '¡Hola Hazel Pasteles! Quiero cotizar un pastel.';
+// Formato de WhatsApp: *negrita*, _cursiva_ y "> " cita; los emojis hacen de viñetas.
+// Se usa api.whatsapp.com/send y no wa.me: la redirección de wa.me corrompe los emojis (salen como "�").
+const SALUDO = '¡Hola *Hazel Pasteles*! 🎂';
+const FIRMA = '_Mensaje enviado desde la web de Hazel Pasteles_ 💕';
 
 @Injectable({ providedIn: 'root' })
 export class WhatsappService {
-  /** Número para mostrar, p. ej. "+51 999 999 999". */
+  /** Número para mostrar, p. ej. "+56 9 7802 1920". */
   readonly numeroVisible =
-    '+' + WHATSAPP_NUMBER.replace(/^(\d{2})(\d{3})(\d{3})(\d{3})$/, '$1 $2 $3 $4');
+    '+' + WHATSAPP_NUMBER.replace(/^(\d{2})(\d)(\d{4})(\d{4})$/, '$1 $2 $3 $4');
 
   urlGenerica(): string {
-    return this.url(SALUDO);
+    return this.url(
+      [SALUDO, 'Quiero información para cotizar un *pastel personalizado*. ✨', '', FIRMA].join('\n'),
+    );
   }
 
-  /** Arma el mensaje del pedido y omite las líneas vacías. */
+  /** Arma el mensaje del pedido con formato de WhatsApp y omite los datos vacíos. */
   urlPedido(d: DatosPedido): string {
     const v = (s: string) => s.trim();
-    const lineas = [SALUDO];
-    if (v(d.nombre)) lineas.push('Nombre: ' + v(d.nombre));
-    if (v(d.ocasion)) lineas.push('Ocasión: ' + v(d.ocasion));
-    if (v(d.fecha)) lineas.push('Fecha: ' + v(d.fecha).split('-').reverse().join('/'));
-    if (v(d.personas)) lineas.push('Personas: ' + v(d.personas));
-    if (v(d.modelo)) lineas.push('Modelo de referencia: ' + v(d.modelo));
-    if (v(d.idea)) lineas.push('Idea: ' + v(d.idea));
+    const datos: [string, string][] = [
+      ['👤 Nombre', v(d.nombre)],
+      ['🎉 Ocasión', v(d.ocasion)],
+      ['📅 Fecha del evento', v(d.fecha) && v(d.fecha).split('-').reverse().join('/')],
+      ['👥 Personas', v(d.personas)],
+      ['🍰 Modelo de referencia', v(d.modelo)],
+    ];
+
+    const lineas = [
+      SALUDO,
+      'Quiero cotizar un *pastel personalizado*. ✨',
+      '',
+      '*📋 DATOS DEL PEDIDO*',
+      ...datos.filter(([, valor]) => valor).map(([campo, valor]) => `${campo}: *${valor}*`),
+    ];
+
+    const idea = v(d.idea);
+    if (idea) {
+      lineas.push(
+        '',
+        '*💡 MI IDEA*',
+        ...idea
+          .split('\n')
+          .map((l) => l.trim())
+          .filter(Boolean)
+          .map((l) => `> ${l}`),
+      );
+    }
+
+    lineas.push('', '¿Me pueden enviar la cotización? ¡Gracias! 🙌', '', FIRMA);
     return this.url(lineas.join('\n'));
   }
 
   private url(texto: string): string {
-    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(texto)}`;
+    return `https://api.whatsapp.com/send?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(texto)}`;
   }
 }
