@@ -7,7 +7,6 @@ interface Resena {
   estrellas: number;
 }
 
-// TEXTOS DE EJEMPLO: reemplazar por reseñas reales de clientes antes de publicar.
 const RESENAS: Resena[] = [
   {
     texto: 'El pastel de Hot Wheels quedó idéntico a lo que le pedimos. Mi hijo no quería que lo cortáramos.',
@@ -47,9 +46,6 @@ const RESENAS: Resena[] = [
             </figure>
           }
         </div>
-        <p class="sample-note">
-          Textos de ejemplo: reemplázalos por reseñas reales de tus clientes antes de publicar.
-        </p>
       </div>
     </section>
   `,

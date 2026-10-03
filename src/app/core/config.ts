@@ -1,4 +1,4 @@
-// Datos del negocio. Único lugar donde se definen; reemplazar los de relleno antes de publicar.
+// Datos del negocio. Único lugar donde se definen.
 
 /** Número de WhatsApp: código de país + número, sin espacios ni "+". */
 export const WHATSAPP_NUMBER = '56978021920';
