@@ -3,6 +3,9 @@
   display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 80px); align-items: start;
 }
 .order .wrap > * { min-width: 0; }
+@media (max-width: 860px) {
+  .order .wrap { grid-template-columns: 1fr; }
+}
 .eyebrow, .lede { color: var(--hz-texto-suave-oscuro); }
 h2 .script { color: var(--hz-frambuesa-oscuro); }
 
@@ -23,8 +26,9 @@ h2 .script { color: var(--hz-frambuesa-oscuro); }
 label { display: grid; gap: 6px; font-size: 14px; font-weight: 700; min-width: 0; }
 input, select, textarea {
   font: 400 16px/1.4 var(--f-body); color: var(--fg); background: var(--bg-alt);
-  border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; width: 100%;
+  border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; width: 100%; min-width: 0;
 }
+input[type="date"] { min-height: 46px; } /* iOS deja el campo de fecha vacío más bajo que los demás */
 textarea { resize: vertical; min-height: 96px; }
 input:focus, select:focus, textarea:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
 .form-foot { font-size: 13px; color: var(--fg-soft); margin: 0; }
