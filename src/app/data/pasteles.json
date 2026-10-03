@@ -1,0 +1,182 @@
+[
+  {
+    "id": "corona-princesa",
+    "nombre": "Corona de princesa",
+    "descripcion": "Crema rosada, perlas y corona dorada.",
+    "categoria": "flores",
+    "etiqueta": "Cumpleaños",
+    "imagen": "img/corona-princesa.jpg",
+    "destacado": true
+  },
+  {
+    "id": "frutas-chantilly",
+    "nombre": "Torta de frutas",
+    "descripcion": "Chantilly con durazno, fresa, kiwi y arándanos.",
+    "categoria": "frutas",
+    "etiqueta": "Frutas",
+    "imagen": "img/frutas-chantilly.jpg",
+    "destacado": true
+  },
+  {
+    "id": "hot-wheels",
+    "nombre": "Pista Hot Wheels",
+    "descripcion": "Dos pisos en fondant con loop y carritos.",
+    "categoria": "infantiles",
+    "etiqueta": "Infantil",
+    "imagen": "img/hot-wheels.jpg",
+    "destacado": true
+  },
+  {
+    "id": "canasta-rosas",
+    "nombre": "Canasta de rosas",
+    "descripcion": "Rosetones lilas sobre tejido de canasta.",
+    "categoria": "flores",
+    "etiqueta": "Flores",
+    "imagen": "img/canasta-rosas.jpg",
+    "destacado": true
+  },
+  {
+    "id": "chocolate-fresa",
+    "nombre": "Chocolate y fresa",
+    "descripcion": "Cobertura de chocolate rallado y fresa al centro.",
+    "categoria": "chocolate",
+    "etiqueta": "Chocolate",
+    "imagen": "img/chocolate-fresa.jpg",
+    "destacado": true
+  },
+  {
+    "id": "baby-shower",
+    "nombre": "Baby shower",
+    "descripcion": "Fondant con figuras de elefante y monito.",
+    "categoria": "infantiles",
+    "etiqueta": "Baby shower",
+    "imagen": "img/baby-shower.jpg",
+    "destacado": true
+  },
+  {
+    "id": "aniversario",
+    "nombre": "Aniversario",
+    "descripcion": "Calendario con la fecha especial y siluetas.",
+    "categoria": "tematicos",
+    "etiqueta": "Aniversario",
+    "imagen": "img/aniversario.jpg",
+    "destacado": true
+  },
+  {
+    "id": "rosetones-dorados",
+    "nombre": "Rosetones dorados",
+    "descripcion": "Crema dorada, nombre y número en fondant.",
+    "categoria": "flores",
+    "etiqueta": "Cumpleaños",
+    "imagen": "img/rosetones-dorados.jpg",
+    "destacado": true
+  },
+  {
+    "id": "corazon-frutas",
+    "nombre": "Corazón de frutas",
+    "descripcion": "Frutas frescas con inicial y borde de fresas.",
+    "categoria": "frutas",
+    "etiqueta": "Frutas",
+    "imagen": "img/corazon-frutas.jpg",
+    "destacado": false
+  },
+  {
+    "id": "drip-chocolate-rosas",
+    "nombre": "Drip de chocolate",
+    "descripcion": "Ganache chorreado con rosas de crema.",
+    "categoria": "chocolate",
+    "etiqueta": "Chocolate",
+    "imagen": "img/drip-chocolate-rosas.jpg",
+    "destacado": false
+  },
+  {
+    "id": "doctor",
+    "nombre": "Bata de doctor",
+    "descripcion": "Fondant con estetoscopio y nombre bordado.",
+    "categoria": "tematicos",
+    "etiqueta": "Profesión",
+    "imagen": "img/doctor.jpg",
+    "destacado": false
+  },
+  {
+    "id": "corazon-rosetones",
+    "nombre": "Corazón de rosetones",
+    "descripcion": "Degradé coral en forma de corazón.",
+    "categoria": "flores",
+    "etiqueta": "Flores",
+    "imagen": "img/corazon-rosetones.jpg",
+    "destacado": false
+  },
+  {
+    "id": "pokemon",
+    "nombre": "Mundo Pokémon",
+    "descripcion": "Personajes impresos y figuras modeladas.",
+    "categoria": "infantiles",
+    "etiqueta": "Infantil",
+    "imagen": "img/pokemon.jpg",
+    "destacado": false
+  },
+  {
+    "id": "hincha-la-u",
+    "nombre": "Hincha de la U",
+    "descripcion": "Fondant crema con lazo y pelota.",
+    "categoria": "tematicos",
+    "etiqueta": "Temático",
+    "imagen": "img/hincha-la-u.jpg",
+    "destacado": false
+  },
+  {
+    "id": "rosas-rosadas",
+    "nombre": "Rosas rosadas",
+    "descripcion": "Cubierto por completo de rosetones.",
+    "categoria": "flores",
+    "etiqueta": "Flores",
+    "imagen": "img/rosas-rosadas.jpg",
+    "destacado": false
+  },
+  {
+    "id": "girasoles",
+    "nombre": "Girasoles",
+    "descripcion": "Dos pisos con flores y girasoles.",
+    "categoria": "flores",
+    "etiqueta": "Flores",
+    "imagen": "img/girasoles.jpg",
+    "destacado": false
+  },
+  {
+    "id": "bus",
+    "nombre": "Viaje en bus",
+    "descripcion": "Carretera de fondant y bus en miniatura.",
+    "categoria": "tematicos",
+    "etiqueta": "Temático",
+    "imagen": "img/bus.jpg",
+    "destacado": false
+  },
+  {
+    "id": "hermano-estrellas",
+    "nombre": "Noche de estrellas",
+    "descripcion": "Fondant azul con estrellas y mensaje.",
+    "categoria": "tematicos",
+    "etiqueta": "Temático",
+    "imagen": "img/hermano-estrellas.jpg",
+    "destacado": false
+  },
+  {
+    "id": "blanco-dorado",
+    "nombre": "Blanco y dorado",
+    "descripcion": "Rosetones blancos con perlas doradas.",
+    "categoria": "flores",
+    "etiqueta": "Flores",
+    "imagen": "img/blanco-dorado.jpg",
+    "destacado": false
+  },
+  {
+    "id": "combo-cupcakes",
+    "nombre": "Docena de cupcakes",
+    "descripcion": "Cupcakes con frosting de colores, en caja.",
+    "categoria": "infantiles",
+    "etiqueta": "Cupcakes",
+    "imagen": "img/combo-cupcakes.jpg",
+    "destacado": false
+  }
+]
