@@ -1,22 +1,34 @@
 <!doctype html>
-<html lang="es">
+<html lang="es-CL">
 <head>
   <meta charset="utf-8">
-  <title>Hazel Pasteles</title>
+  <title>Tortas personalizadas en Santiago | Hazel Pasteles</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Pasteles personalizados hechos a mano. Cada pastel cuenta una historia, la tuya.">
+  <meta name="description" content="Tortas personalizadas hechas a mano en Santiago: tortas de cumpleaños, temáticas, baby shower, matrimonios y aniversarios. Retiro o delivery. Cotiza por WhatsApp.">
+  <meta name="keywords" content="tortas personalizadas, tortas Santiago, tortas de cumpleaños, tortas temáticas, tortas a pedido, tortas a domicilio, tortas baby shower, tortas para matrimonio, cupcakes, pastelería artesanal, repostería Santiago">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://hazel-pasteles.com/">
+
+  <!-- Ubicación -->
+  <meta name="geo.region" content="CL-RM">
+  <meta name="geo.placename" content="Santiago, Chile">
+
   <meta name="theme-color" content="#FCF5F1" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#24130D" media="(prefers-color-scheme: dark)">
 
-  <!-- Open Graph -->
+  <!-- Open Graph (WhatsApp, Facebook, Instagram) -->
   <meta property="og:type" content="website">
-  <meta property="og:locale" content="es_PE">
+  <meta property="og:locale" content="es_CL">
   <meta property="og:site_name" content="Hazel Pasteles">
-  <meta property="og:title" content="Hazel Pasteles">
-  <meta property="og:description" content="Pasteles personalizados hechos a mano. Cada pastel cuenta una historia, la tuya.">
-  <meta property="og:image" content="img/hero-rosa-porcion.webp">
-  <meta property="og:image:alt" content="Pastel rosado con rosetones de crema y una porción cortada">
+  <meta property="og:url" content="https://hazel-pasteles.com/">
+  <meta property="og:title" content="Tortas personalizadas en Santiago | Hazel Pasteles">
+  <meta property="og:description" content="Cada torta cuenta una historia, la tuya. Tortas personalizadas hechas a mano en Santiago, con retiro o delivery.">
+  <meta property="og:image" content="https://hazel-pasteles.com/img/hero-rosa-porcion.webp">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Torta rosada con rosetones de crema y una porción cortada">
+  <meta name="twitter:card" content="summary_large_image">
 
   <link rel="icon" type="image/webp" href="img/logo.webp">
   <link rel="apple-touch-icon" href="img/logo.webp">
@@ -24,6 +36,48 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Dancing+Script:wght@500;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Ficha de negocio local para Google (schema.org) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "@id": "https://hazel-pasteles.com/#negocio",
+    "name": "Hazel Pasteles",
+    "description": "Tortas personalizadas hechas a mano en Santiago para cumpleaños, baby showers, aniversarios, matrimonios y celebraciones.",
+    "url": "https://hazel-pasteles.com/",
+    "logo": "https://hazel-pasteles.com/img/logo.webp",
+    "image": "https://hazel-pasteles.com/img/hero-rosa-porcion.webp",
+    "telephone": "+56987389539",
+    "priceRange": "$$",
+    "servesCuisine": "Pastelería",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santiago",
+      "addressRegion": "Región Metropolitana",
+      "addressCountry": "CL"
+    },
+    "areaServed": { "@type": "City", "name": "Santiago" },
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tortas personalizadas",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tortas de cumpleaños" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tortas temáticas infantiles" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tortas para baby shower" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tortas de aniversario y matrimonio" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Tortas de frutas" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Cupcakes" } }
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <app-root></app-root>

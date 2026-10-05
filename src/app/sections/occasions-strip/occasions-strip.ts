@@ -4,10 +4,11 @@ const OCASIONES = [
   'Cumpleaños',
   'Baby shower',
   'Aniversarios',
-  'Pasteles temáticos',
+  'Tortas temáticas',
   'Tortas de frutas',
   'Cupcakes',
-  'Graduaciones',
+  'Licenciaturas',
+  'Matrimonios',
 ];
 
 @Component({

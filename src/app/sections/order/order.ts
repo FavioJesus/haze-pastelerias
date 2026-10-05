@@ -25,7 +25,7 @@ export class Order {
   protected readonly horario = HORARIO;
   protected readonly anticipacion = ANTICIPACION;
 
-  protected readonly ocasiones = ['Cumpleaños', 'Baby shower', 'Aniversario', 'Boda', 'Graduación', 'Otra'];
+  protected readonly ocasiones = ['Cumpleaños', 'Baby shower', 'Aniversario', 'Matrimonio', 'Licenciatura', 'Otra'];
   protected readonly personas = ['10 a 15', '15 a 25', '25 a 40', '40 a 60', 'Más de 60'];
 
   protected readonly form = inject(NonNullableFormBuilder).group({

@@ -9,7 +9,7 @@ interface Resena {
 
 const RESENAS: Resena[] = [
   {
-    texto: 'El pastel de Hot Wheels quedó idéntico a lo que le pedimos. Mi hijo no quería que lo cortáramos.',
+    texto: 'La torta de Hot Wheels quedó idéntica a lo que le pedimos. Mi hijo no quería que lo cortáramos.',
     autor: 'Cliente',
     ocasion: 'Cumpleaños infantil',
     estrellas: 5,
@@ -21,7 +21,7 @@ const RESENAS: Resena[] = [
     estrellas: 5,
   },
   {
-    texto: 'Le hicieron el pastel de aniversario con nuestro calendario y la fecha marcada. Un detalle precioso.',
+    texto: 'Nos hicieron la torta de aniversario con nuestro calendario y la fecha marcada. Un detalle precioso.',
     autor: 'Cliente',
     ocasion: 'Aniversario',
     estrellas: 5,

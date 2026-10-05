@@ -10,8 +10,8 @@ const PASOS = [
     texto: 'Te proponemos sabor, relleno y diseño con su precio. Separas tu fecha con un adelanto.',
   },
   {
-    titulo: 'Recoge o recibe tu pastel',
-    texto: 'Lo preparamos fresco para tu día. Coordinamos el recojo o el envío a tu dirección.',
+    titulo: 'Retira o recibe tu torta',
+    texto: 'La preparamos fresca para tu día. Coordinamos el retiro o el delivery a tu dirección en Santiago.',
   },
 ];
 

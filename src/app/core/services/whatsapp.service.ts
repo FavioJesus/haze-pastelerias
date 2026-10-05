@@ -25,7 +25,7 @@ export class WhatsappService {
 
   urlGenerica(): string {
     return this.url(
-      [SALUDO, 'Quiero información para cotizar un *pastel personalizado*. ✨', '', FIRMA].join('\n'),
+      [SALUDO, 'Quiero información para cotizar una *torta personalizada*. ✨', '', FIRMA].join('\n'),
     );
   }
 
@@ -42,7 +42,7 @@ export class WhatsappService {
 
     const lineas = [
       SALUDO,
-      'Quiero cotizar un *pastel personalizado*. ✨',
+      'Quiero cotizar una *torta personalizada*. ✨',
       '',
       '*📋 DATOS DEL PEDIDO*',
       ...datos.filter(([, valor]) => valor).map(([campo, valor]) => `${campo}: *${valor}*`),

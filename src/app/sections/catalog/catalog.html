@@ -2,11 +2,11 @@
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <p class="eyebrow">Nuestros pasteles</p>
-        <h2>Algunos que ya <span class="script">celebramos</span></h2>
+        <p class="eyebrow">Nuestras tortas</p>
+        <h2>Algunas que ya <span class="script">celebramos</span></h2>
         <p class="lede">
-          Cada uno se hizo para alguien en particular. Elige el que más te guste como punto de partida
-          y lo adaptamos a tu fecha, sabor y tamaño.
+          Cada una se hizo para alguien en particular. Elige la que más te guste como punto de partida
+          y la adaptamos a tu fecha, sabor y tamaño.
         </p>
       </div>
       <div class="filters" role="group" aria-label="Filtrar por tipo">
@@ -36,19 +36,19 @@
     </div>
 
     <div class="carousel-nav">
-      <div class="dots" aria-label="Elegir pastel">
+      <div class="dots" aria-label="Elegir torta">
         @for (i of puntos(); track i) {
           <button
             type="button"
-            [attr.aria-label]="'Pastel ' + (i + 1) + ' de ' + totalPuntos()"
+            [attr.aria-label]="'Torta ' + (i + 1) + ' de ' + totalPuntos()"
             [attr.aria-current]="i === actual()"
             (click)="irA(i)"
           ></button>
         }
       </div>
       <div class="arrows">
-        <button type="button" aria-label="Pastel anterior" [disabled]="enInicio()" (click)="anterior()">‹</button>
-        <button type="button" aria-label="Pastel siguiente" [disabled]="enFinal()" (click)="siguiente()">›</button>
+        <button type="button" aria-label="Torta anterior" [disabled]="enInicio()" (click)="anterior()">‹</button>
+        <button type="button" aria-label="Torta siguiente" [disabled]="enFinal()" (click)="siguiente()">›</button>
       </div>
     </div>
     <p class="mobile-more">¿Buscas otro modelo? Usa los filtros o <a href="#pedido">cuéntanos tu idea</a>.</p>
